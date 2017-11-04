@@ -23,8 +23,5 @@ def scraper(start,end):
         db.append(contents)
     pickle.dump(db,a)
     a.close()
-scraper(1700,1800)
-scraper(1800,1900)
-scraper(1900,2000)
-scraper(2000,2100)
-scraper(2100,2200)
+for x in range(5300,6301,100):
+    scraper(x,x+100)
