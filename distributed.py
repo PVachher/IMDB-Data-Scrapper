@@ -1,6 +1,7 @@
 import json, urllib2,cookielib, pickle
 
 def scraper(start,end):
+    print 'Worker'
     a = open(str(start)+'-'+str(end)+'.txt','wb')
     db = []
     hdr = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11',
@@ -23,6 +24,15 @@ def scraper(start,end):
         db.append(contents)
     pickle.dump(db,a)
     a.close()
-for x in range(5300,6301,100):
-    scraper(x,x+100)
 
+import multiprocessing
+
+if __name__ == '__main__':
+    jobs = []
+    start = 7100
+    end = 8100
+    chunk = 200
+    for x in range(start,end,chunk):
+        p = multiprocessing.Process(target=scraper,args=(x,x+chunk,))
+        jobs.append(p)
+        p.start()
