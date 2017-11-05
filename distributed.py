@@ -29,9 +29,9 @@ import multiprocessing
 
 if __name__ == '__main__':
     jobs = []
-    start = 7100
-    end = 8100
-    chunk = 200
+    start = 8100
+    end = 9100
+    chunk = 500
     for x in range(start,end,chunk):
         p = multiprocessing.Process(target=scraper,args=(x,x+chunk,))
         jobs.append(p)
