@@ -1,11 +1,11 @@
 import pickle, urllib2, json, os
 def write_to_file(final):
-    b = open('final.txt','wb')
+    b = open('final1.txt','wb')
     pickle.dump(final,b)
     b.close()
 
 def read_from_file():
-    b = open('final.txt','rb')
+    b = open('final1.txt','rb')
     return pickle.load(b)
     b.close()
 
@@ -56,10 +56,11 @@ def incomplete_count(final):
 
 
 
-#database = merge_all_files()
-#print incomplete_count(database)
+database = merge_all_files()
+print incomplete_count(database)
 #write_to_file(database)
-a = read_from_file()
+#a = read_from_file()
+#print incomplete_count(a)
+a = complete_incomplete_files(database)
 print incomplete_count(a)
-a = complete_incomplete_files(a)
 write_to_file(a)
