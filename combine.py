@@ -46,8 +46,7 @@ def complete_incomplete_files(final):
             contents = json.loads(page.read())
             print contents['title'], contents['release_date']
             final[x] = contents
-            write_to_file(final)
-
+    return final
 def incomplete_count(final):
     count = 0
     for x in range(len(final)):
@@ -62,4 +61,5 @@ def incomplete_count(final):
 #write_to_file(database)
 a = read_from_file()
 print incomplete_count(a)
-complete_incomplete_files(a)
+a = complete_incomplete_files(a)
+write_to_file(a)
