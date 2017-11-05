@@ -29,10 +29,10 @@ import multiprocessing
 
 if __name__ == '__main__':
     jobs = []
-    start = 9100
-    end = 10000
-    chunk = 200
-    for x in range(start,end,chunk):
-        p = multiprocessing.Process(target=scraper,args=(x,x+chunk,))
-        jobs.append(p)
-        p.start()
+    start = 10000
+    p = multiprocessing.Process(target=scraper,args=(start,start+500,))
+    jobs.append(p)
+    p.start()
+    p = multiprocessing.Process(target=scraper,args=(start+500,start+1000,))
+    jobs.append(p)
+    p.start()
