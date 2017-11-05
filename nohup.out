@@ -1,0 +1,46 @@
+Incomplete Entries: 923
+ 
+ 
+The Menace to Carlotta 1914-03-22
+ 
+Face Value 1918-01-19
+Fanatics 1917-12-09
+The Man from Painted Post 1917-09-30
+The Fatal Ring 1917-07-08
+Fear Not 1917-11-26
+The Fibbers 1917-10-15
+The Field of Honor 1917-06-11
+The Fighting Gentleman 
+The Fighting Gringo 1917-03-26
+Fighting Mad 1917-11-18
+Fighting Odds 1917-09-30
+The Fighting Trail 1917-09-10
+Filling His Own Shoes 1917-06-11
+The Final Fraud 1916-12-02
+The Final Payment 1917-05-21
+The Firefly of Tough Luck 1917-10-21
+Fires of Rebellion 1917-07-02
+Five Little Widows 1917-07-02
+The Flame of Youth 1917-06-16
+Flames of Treachery 1917-05-10
+The Flashlight 1917-05-21
+The Flirt 1917-11-11
+Flirting with Death 1917-09-18
+Flor de durazno 1917-09-28
+The Flower of Doom 1917-04-16
+Flying Colors 1917-09-23
+Follow the Girl 1917-07-26
+The Food Gamblers 1917-08-05
+The Foolish Virgin 1916-09-26
+For Liberty 1917-12-30
+For Valour 1917-11-25
+Forbidden Paths 1917-07-12
+Forget-Me-Not 1917-04-16
+The Fortunes of Fifi 1917-02-26
+'49-'17 1917-10-15
+Traceback (most recent call last):
+  File "combine.py", line 64, in <module>
+    a = complete_incomplete_files(a)
+  File "combine.py", line 47, in complete_incomplete_files
+    print contents['title'], contents['release_date']
+UnicodeEncodeError: 'ascii' codec can't encode character u'\xe6' in position 6: ordinal not in range(128)
